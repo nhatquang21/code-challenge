@@ -46,7 +46,9 @@ export default function CurrencySwapForm() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex items-center flex-col justify-center bg-gray-50">
+      <h1 className="text-2xl font-bold mb-6">Fancy form</h1>
+
       <FormProvider {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
