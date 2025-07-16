@@ -69,10 +69,10 @@ export const CurrencyInput = memo(function CurrencyInput({
                   message: 'Value must be greater than 0',
                 }
               : undefined,
-            pattern: {
-              value: /^[0-9]+([.,][0-9]+)?$/,
-              message: 'Please enter a valid number',
-            },
+            // pattern: {
+            //   value: /^[0-9]+([.,][0-9]+)?$/,
+            //   message: 'Please enter a valid number',
+            // },
             validate: (value) => {
               if (!value) return true;
               const numberValue = Number(value.toString().replace(',', '.'));
@@ -83,7 +83,6 @@ export const CurrencyInput = memo(function CurrencyInput({
             <input
               type="text"
               inputMode="decimal"
-              pattern="[0-9]*[.,]?[0-9]*"
               value={field.value}
               onChange={handleChange}
               className="bg-transparent w-full outline-none text-2xl font-bold w-1/2"
