@@ -1,9 +1,9 @@
 import React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useTokenPrices } from '../hooks/useTokenPrices';
 import { CurrencyInput } from './CurrencyInput';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 interface FormValues {
   fromAmount: string;
