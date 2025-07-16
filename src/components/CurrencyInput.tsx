@@ -22,8 +22,6 @@ const calculateSwapAmount = (
   const toTokenData = tokens.find((t) => t.currency === toToken);
 
   if (!fromTokenData?.price || !toTokenData?.price) return '';
-  console.log('From token data price:', fromTokenData.price);
-  console.log('To token data price:', toTokenData.price);
   const result = (Number(amount) * fromTokenData.price) / toTokenData.price;
   return result.toFixed(4);
 };
